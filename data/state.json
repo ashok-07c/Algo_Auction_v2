@@ -1,0 +1,531 @@
+{
+  "config": {
+    "initialCoins": 1000,
+    "eventName": "AlgoAuct 2026",
+    "timerDurationSec": 15
+  },
+  "gameState": "SETUP",
+  "teams": [],
+  "algorithmsCatalog": [
+    {
+      "id": "a1",
+      "name": "BFS – Breadth-First Search",
+      "category": "Graph Traversal",
+      "minBid": 50,
+      "description": "Traversal / shortest path in unweighted graphs.",
+      "baseMinBid": 30,
+      "importanceCount": 1
+    },
+    {
+      "id": "a2",
+      "name": "DFS – Depth-First Search",
+      "category": "Graph Traversal",
+      "minBid": 50,
+      "description": "Graph traversal / connectivity exploration.",
+      "baseMinBid": 30,
+      "importanceCount": 1
+    },
+    {
+      "id": "a3",
+      "name": "Dijkstra's Algorithm",
+      "category": "Shortest Path",
+      "minBid": 70,
+      "description": "Single-source shortest path with non-negative edge weights.",
+      "baseMinBid": 50,
+      "importanceCount": 1
+    },
+    {
+      "id": "a4",
+      "name": "A* (A-Star)",
+      "category": "Heuristic Search",
+      "minBid": 90,
+      "description": "Heuristic shortest-path search using g(n) + h(n).",
+      "baseMinBid": 70,
+      "importanceCount": 1
+    },
+    {
+      "id": "a5",
+      "name": "Kruskal's Algorithm",
+      "category": "Minimum Spanning Tree",
+      "minBid": 70,
+      "description": "Greedy MST construction using edge list and Union-Find.",
+      "baseMinBid": 50,
+      "importanceCount": 1
+    },
+    {
+      "id": "a6",
+      "name": "Prim's Algorithm",
+      "category": "Minimum Spanning Tree",
+      "minBid": 70,
+      "description": "Greedy MST construction from a starting vertex.",
+      "baseMinBid": 50,
+      "importanceCount": 1
+    },
+    {
+      "id": "a7",
+      "name": "Bellman-Ford Algorithm",
+      "category": "Shortest Path",
+      "minBid": 80,
+      "description": "Shortest path supporting negative edges and cycle detection.",
+      "baseMinBid": 60,
+      "importanceCount": 1
+    },
+    {
+      "id": "a8",
+      "name": "Floyd-Warshall Algorithm",
+      "category": "All-Pairs Shortest Path",
+      "minBid": 100,
+      "description": "Computes shortest paths between all pairs of vertices in O(V^3).",
+      "baseMinBid": 80,
+      "importanceCount": 1
+    },
+    {
+      "id": "a9",
+      "name": "Bidirectional Search",
+      "category": "Graph Search",
+      "minBid": 60,
+      "description": "Simultaneous search from source and destination.",
+      "baseMinBid": 40,
+      "importanceCount": 1
+    },
+    {
+      "id": "a10",
+      "name": "Hill Climbing",
+      "category": "Local Search",
+      "minBid": 60,
+      "description": "Heuristic local search choosing locally optimal neighbor.",
+      "baseMinBid": 40,
+      "importanceCount": 1
+    },
+    {
+      "id": "b1",
+      "name": "Greedy Algorithm",
+      "category": "General Paradigm",
+      "minBid": 40,
+      "description": "Makes locally optimal choices at each step.",
+      "baseMinBid": 40,
+      "importanceCount": 0
+    },
+    {
+      "id": "b2",
+      "name": "Linear Search",
+      "category": "Searching",
+      "minBid": 40,
+      "description": "Sequential search on unsorted collections.",
+      "baseMinBid": 20,
+      "importanceCount": 1
+    },
+    {
+      "id": "b3",
+      "name": "Binary Search",
+      "category": "Searching",
+      "minBid": 90,
+      "description": "O(log N) search on sorted arrays.",
+      "baseMinBid": 50,
+      "importanceCount": 2
+    },
+    {
+      "id": "b4",
+      "name": "Bubble Sort",
+      "category": "Sorting",
+      "minBid": 20,
+      "description": "Simple comparison sorting by adjacent swaps.",
+      "baseMinBid": 20,
+      "importanceCount": 0
+    },
+    {
+      "id": "b5",
+      "name": "Insertion Sort",
+      "category": "Sorting",
+      "minBid": 50,
+      "description": "Efficient sorting for small or nearly-sorted datasets.",
+      "baseMinBid": 30,
+      "importanceCount": 1
+    },
+    {
+      "id": "b6",
+      "name": "Selection Sort",
+      "category": "Sorting",
+      "minBid": 40,
+      "description": "Simple in-place sorting with O(1) extra space.",
+      "baseMinBid": 20,
+      "importanceCount": 1
+    },
+    {
+      "id": "b7",
+      "name": "Quick Sort",
+      "category": "Sorting",
+      "minBid": 80,
+      "description": "Fast average O(N log N) in-place sorting.",
+      "baseMinBid": 60,
+      "importanceCount": 1
+    },
+    {
+      "id": "b8",
+      "name": "Merge Sort",
+      "category": "Sorting",
+      "minBid": 90,
+      "description": "Guaranteed O(N log N) worst-case divide-and-conquer sorting.",
+      "baseMinBid": 70,
+      "importanceCount": 1
+    },
+    {
+      "id": "b9",
+      "name": "Two Pointer",
+      "category": "Array Technique",
+      "minBid": 90,
+      "description": "Two-pointer technique for sorted arrays/strings.",
+      "baseMinBid": 50,
+      "importanceCount": 2
+    },
+    {
+      "id": "b10",
+      "name": "Dynamic Programming",
+      "category": "Optimization",
+      "minBid": 120,
+      "description": "Solves overlapping subproblems via memoization/tabulation.",
+      "baseMinBid": 100,
+      "importanceCount": 1
+    }
+  ],
+  "questionsCatalog": [
+    {
+      "id": "qa-1",
+      "title": "A1. Shortest Path in an Unweighted Network",
+      "description": "A college network contains N computers connected by network links. Every link has the same cost. Given a source computer and a destination computer, find the minimum number of links required to reach the destination.",
+      "optionAlgoIds": [
+        "a3",
+        "a2",
+        "a1",
+        "a4",
+        "a9",
+        "a10"
+      ],
+      "correctAlgoId": "a1",
+      "explanation": "Because all edges have equal cost, BFS explores the graph level by level and guarantees the shortest path in terms of number of edges.",
+      "rewardPoints": 100
+    },
+    {
+      "id": "qa-2",
+      "title": "A2. Explore All Reachable Nodes",
+      "description": "Given a network starting from computer S, visit every reachable computer by exploring as deeply as possible before returning to previous nodes.",
+      "optionAlgoIds": [
+        "a1",
+        "a3",
+        "a2",
+        "a4",
+        "a9",
+        "a10"
+      ],
+      "correctAlgoId": "a2",
+      "explanation": "The required exploration strategy is depth-first traversal.",
+      "rewardPoints": 100
+    },
+    {
+      "id": "qa-3",
+      "title": "A3. Cheapest Route Between Cities",
+      "description": "There are N cities connected by roads. Every road has a positive travel cost. Find the minimum-cost route from city S to city T.",
+      "optionAlgoIds": [
+        "a1",
+        "a4",
+        "a2",
+        "a3",
+        "a7",
+        "a8"
+      ],
+      "correctAlgoId": "a3",
+      "explanation": "All edge weights are positive and only a single-source shortest path is required.",
+      "rewardPoints": 100
+    },
+    {
+      "id": "qa-4",
+      "title": "A4. Shortest Path with Negative Edge Costs",
+      "description": "A transportation network contains roads whose costs may be positive or negative. Find the shortest distance from a source to every other vertex and determine whether a negative-weight cycle exists.",
+      "optionAlgoIds": [
+        "a3",
+        "a8",
+        "a7",
+        "a1",
+        "a2",
+        "a4"
+      ],
+      "correctAlgoId": "a7",
+      "explanation": "Bellman-Ford supports negative edge weights and can detect negative-weight cycles.",
+      "rewardPoints": 120
+    },
+    {
+      "id": "qa-5",
+      "title": "A5. Shortest Distance Between Every Pair",
+      "description": "A small transportation network contains N cities. Find the shortest distance between every pair of cities.",
+      "optionAlgoIds": [
+        "a3",
+        "a7",
+        "a1",
+        "a8",
+        "a2",
+        "a4"
+      ],
+      "correctAlgoId": "a8",
+      "explanation": "The requirement is all-pairs shortest paths, which is the primary application of Floyd-Warshall.",
+      "rewardPoints": 120
+    },
+    {
+      "id": "qa-6",
+      "title": "A6. Minimum-Cost Cable Network",
+      "description": "A university wants to connect all its buildings using network cables. Each possible cable has a different cost. Connect all buildings with minimum total cable cost. The input is provided as a list of weighted edges.",
+      "optionAlgoIds": [
+        "a6",
+        "b1",
+        "a5",
+        "a3",
+        "a1",
+        "a2"
+      ],
+      "correctAlgoId": "a5",
+      "explanation": "The problem is a Minimum Spanning Tree problem, and the edge-list representation makes Kruskal particularly suitable.",
+      "rewardPoints": 100
+    },
+    {
+      "id": "qa-7",
+      "title": "A7. Minimum Network from a Starting Building",
+      "description": "A university wants to connect all buildings with minimum total cable cost. The network is represented using an adjacency matrix, and construction starts from a specified building.",
+      "optionAlgoIds": [
+        "a5",
+        "b1",
+        "a3",
+        "a6",
+        "a1",
+        "a2"
+      ],
+      "correctAlgoId": "a6",
+      "explanation": "Prim's grows the Minimum Spanning Tree from a starting vertex and works naturally with an adjacency matrix.",
+      "rewardPoints": 100
+    },
+    {
+      "id": "qa-8",
+      "title": "A8. Search from Both Ends",
+      "description": "A large unweighted network has a known source and destination. Find the shortest route by searching simultaneously from both the source and destination until the searches meet.",
+      "optionAlgoIds": [
+        "a1",
+        "a2",
+        "a9",
+        "a3",
+        "a4",
+        "a10"
+      ],
+      "correctAlgoId": "a9",
+      "explanation": "The problem specifically benefits from simultaneous search from both endpoints.",
+      "rewardPoints": 100
+    },
+    {
+      "id": "qa-9",
+      "title": "A9. GPS Navigation",
+      "description": "A GPS system needs to find a shortest route between two locations. The system knows the actual cost traveled so far and also has a valid estimate of the remaining distance to the destination.",
+      "optionAlgoIds": [
+        "a3",
+        "a1",
+        "a2",
+        "a4",
+        "a9",
+        "a10"
+      ],
+      "correctAlgoId": "a4",
+      "explanation": "A* combines the cost already travelled with a heuristic estimate of the remaining cost.",
+      "rewardPoints": 120
+    },
+    {
+      "id": "qa-10",
+      "title": "A10. Heuristic-Based Robot Navigation",
+      "description": "A robot is moving toward a target. At every step, it examines neighboring positions and chooses the position that appears closest to the target according to a heuristic. The objective is to reach the target quickly rather than guarantee the globally shortest route.",
+      "optionAlgoIds": [
+        "a4",
+        "b1",
+        "a1",
+        "a10",
+        "a2",
+        "a9"
+      ],
+      "correctAlgoId": "a10",
+      "explanation": "The algorithm repeatedly chooses the locally most promising neighboring state.",
+      "rewardPoints": 100
+    },
+    {
+      "id": "qb-1",
+      "title": "B1. Search an Unsorted List",
+      "description": "You are given an unsorted list of student IDs. Determine whether a particular ID exists in the list. Only one search operation is required.",
+      "optionAlgoIds": [
+        "b3",
+        "b4",
+        "b2",
+        "b6",
+        "b5",
+        "b7"
+      ],
+      "correctAlgoId": "b2",
+      "explanation": "The data is unsorted and only one search is required. Sorting first would add unnecessary work.",
+      "rewardPoints": 80
+    },
+    {
+      "id": "qb-2",
+      "title": "B2. Search a Sorted List",
+      "description": "A college stores student IDs in ascending order. Given an ID, determine whether it exists. The list contains up to 1,000,000 IDs.",
+      "optionAlgoIds": [
+        "b2",
+        "b7",
+        "b3",
+        "b8",
+        "b5",
+        "b6"
+      ],
+      "correctAlgoId": "b3",
+      "explanation": "The list is already sorted, allowing the search space to be halved at every step.",
+      "rewardPoints": 100
+    },
+    {
+      "id": "qb-3",
+      "title": "B3. Sort a Small Dataset",
+      "description": "Sort a small collection of numbers in ascending order. Constraints: N <= 50, O(1) additional memory is preferred, simple implementation is preferred.",
+      "optionAlgoIds": [
+        "b4",
+        "b5",
+        "b7",
+        "b6",
+        "b8",
+        "b1"
+      ],
+      "correctAlgoId": "b6",
+      "explanation": "For a very small dataset with constant auxiliary space and simple implementation, Selection Sort is the intended choice.",
+      "rewardPoints": 80
+    },
+    {
+      "id": "qb-4",
+      "title": "B4. Sort a Nearly Sorted Array",
+      "description": "A list of student marks is already almost sorted. Only a small number of elements are out of position. Sort the complete list.",
+      "optionAlgoIds": [
+        "b4",
+        "b6",
+        "b5",
+        "b7",
+        "b8",
+        "b1"
+      ],
+      "correctAlgoId": "b5",
+      "explanation": "Insertion Sort performs very well when the number of inversions is small.",
+      "rewardPoints": 100
+    },
+    {
+      "id": "qb-5",
+      "title": "B5. Guaranteed Worst-Case Sorting",
+      "description": "A large dataset must be sorted. The system requires a guaranteed worst-case time complexity of O(N log N).",
+      "optionAlgoIds": [
+        "b7",
+        "b5",
+        "b6",
+        "b8",
+        "b4",
+        "b1"
+      ],
+      "correctAlgoId": "b8",
+      "explanation": "Merge Sort guarantees O(N log N) worst-case complexity, while standard Quick Sort can degrade to O(N²).",
+      "rewardPoints": 120
+    },
+    {
+      "id": "qb-6",
+      "title": "B6. Fast In-Place Sorting",
+      "description": "A large array needs to be sorted efficiently. The application prefers an in-place algorithm and is primarily concerned with average-case performance.",
+      "optionAlgoIds": [
+        "b8",
+        "b5",
+        "b7",
+        "b6",
+        "b4",
+        "b1"
+      ],
+      "correctAlgoId": "b7",
+      "explanation": "Quick Sort is generally efficient in practice, has good average-case performance, and can be implemented in-place.",
+      "rewardPoints": 120
+    },
+    {
+      "id": "qb-7",
+      "title": "B7. Search One Million Sorted IDs",
+      "description": "A database contains one million student IDs in sorted order. The system receives many search queries and must determine whether each ID exists.",
+      "optionAlgoIds": [
+        "b2",
+        "b7",
+        "b8",
+        "b3",
+        "b5",
+        "b6"
+      ],
+      "correctAlgoId": "b3",
+      "explanation": "The data is already sorted, so Binary Search provides O(log N) search per query.",
+      "rewardPoints": 100
+    },
+    {
+      "id": "qb-8",
+      "title": "B8. Find a Pair with a Given Sum",
+      "description": "Given a sorted array of N <= 100,000 integers and a target value T, determine whether two different elements have a sum equal to T. Constraints: Array is already sorted, O(1) extra space.",
+      "optionAlgoIds": [
+        "b2",
+        "b3",
+        "b9",
+        "b4",
+        "b7",
+        "b8"
+      ],
+      "correctAlgoId": "b9",
+      "explanation": "Two pointers can solve the problem in O(N) time and O(1) extra space.",
+      "rewardPoints": 120
+    },
+    {
+      "id": "qb-9",
+      "title": "B9. Maximum Sum Without Adjacent Elements",
+      "description": "You are given an array where each element represents the value of a house. You cannot select two adjacent houses. Find the maximum total value that can be collected. Example: Input [2, 7, 9, 3, 1] -> Output: 12 (Selection: 2 + 9 + 1 = 12).",
+      "optionAlgoIds": [
+        "b1",
+        "b2",
+        "b3",
+        "b10",
+        "b7",
+        "b8"
+      ],
+      "correctAlgoId": "b10",
+      "explanation": "The problem has overlapping subproblems and optimal substructure. The solution can be built from solutions to smaller prefixes.",
+      "rewardPoints": 150
+    },
+    {
+      "id": "qb-10",
+      "title": "B10. Find a Pair in a Sorted Array",
+      "description": "Given a sorted array of N <= 200,000 integers and a target value T, determine whether two numbers add up to T. Constraints: Array is already sorted, O(1) additional space, target complexity: O(N).",
+      "optionAlgoIds": [
+        "b2",
+        "b3",
+        "b4",
+        "b9",
+        "b5",
+        "b7"
+      ],
+      "correctAlgoId": "b9",
+      "explanation": "Place one pointer at each end. Move the left or right pointer depending on whether the current sum is smaller or larger than the target.",
+      "rewardPoints": 120
+    }
+  ],
+  "currentAuction": {
+    "active": false,
+    "algo": null,
+    "highestBid": 0,
+    "highestBidderId": null,
+    "highestBidderName": null,
+    "timerSeconds": 10,
+    "announcementStage": 0,
+    "statusMessage": "Waiting for auction to start..."
+  },
+  "currentQuestion": {
+    "active": false,
+    "question": null,
+    "revealed": false,
+    "submissions": {}
+  },
+  "bidsHistory": [],
+  "logs": []
+}
